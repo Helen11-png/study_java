@@ -1,0 +1,30 @@
+# Компилированные файлы Java
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# Maven
+target/
+
+# Gradle
+build/
+.gradle/
+
+# Логи
+*.log
+
+# OS-специфичное
+.DS_Store        # macOS
+Thumbs.db        # Windows
+
