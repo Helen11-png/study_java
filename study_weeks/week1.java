@@ -75,11 +75,48 @@ java Main
  */
 
 
-//разобрать
+
+/*
+Способ	          | Когда использовать
+----------------------------------------
+Scanner	          | 95% учебных задач
+BufferedReader    | Много чисел, скорость
+System.in.read()  |  Один символ, «под капотом»
+ */
+
+// SCANNER
+
+import java.util.Scanner;
+
 public class week1 {
-    public static void main(String[] args) {
-        int a = 3;
-        int b = 5;
-        System.out.println(a + b);
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Введите число");
+        int a=sc.nextInt();
+        System.out.println("вы ввели " + a);
+        System.out.print("Введите число");
+        int  b=sc.nextInt();
+        System.out.println("вы ввели " + b);
+        System.out.print("Введите символ");
+        char ch=sc.next().charAt(0);
+        System.out.println("вы ввыели" + ch);
+        System.out.print("Введите слово");
+        sc.nextLine();
+        String word = sc.nextLine();
+        System.out.println("Вы ввели " + word);
+
     }
 }
+/*
+ Все основные методы Scanner
+
+Метод	               |Что читает	              |Пример ввода → результат
+sc.nextInt()	       |Целое число (int)	      |42 → 42
+sc.nextLong()          |Длинное целое (long)      |9999999999 → 9999999999L
+sc.nextDouble()        |Дробное (double)	      |3.14 → 3.14
+sc.nextFloat()	       |Дробное (float)	          |2.5 → 2.5f
+sc.nextBoolean()       |true / false	          |true → true
+sc.next()	           |Одно слово (до пробела)   |hello world → hello
+sc.nextLine()          |Целую строку (до Enter)   |hello world → "hello world"
+sc.next().charAt(0)	   |Один символ	              |A → 'A'
+ */

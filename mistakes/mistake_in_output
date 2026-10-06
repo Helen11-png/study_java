@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class week1 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Введите число");
+        int a=sc.nextInt();
+        System.out.println("вы ввели " + a);
+        System.out.print("Введите число");
+        int  b=sc.nextInt();
+        System.out.println("вы ввели " + b);
+        System.out.print("Введите символ");
+        char ch=sc.next().charAt(0);
+        System.out.println("вы ввыели" + ch);
+        System.out.print("Введите слово");
+        String word = sc.nextLine();
+        System.out.println("Вы ввели " + word);
+
+    }
+}
+
+Введите число7
+вы ввели 7
+Введите число5
+вы ввели 5
+Введите символ7
+вы ввыели7
+Введите словоВы ввели
+PS C:\Users\HONOR\Desktop\repo_studying\JAVA_STUDY\study_weeks> sryhjhttrth
+sryhjhttrth : Имя "sryhjhttrth" не распознано как имя командлета, функции, файла сценария или выполняемой
+ программы. Проверьте правильность написания имени, а также наличие и правильность пути, после чего повто
+рите попытку.
+строка:1 знак:1
++ sryhjhttrth
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (sryhjhttrth:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+Проблема: sc.nextLine() «съедает» Enter после charAt(0)
+int a = sc.nextInt();        // читает 7, но оставляет "\n" в буфере
+int b = ...nextInt();        // читает 5, но оставляет "\n"
+char ch = sc.next().charAt(0); // читает "7", но ОСТАВЛЯЕТ "\n" после него
+String word = sc.nextLine();   // ← видит "\n" и возвращает ПУСТУЮ строку
+Как исправить: после next()/nextInt()/charAt() всегда добавляйте sc.nextLine(), чтобы «съесть» остаток строки:
+char ch = sc.next().charAt(0);
+sc.nextLine();  // ← «съедаем» Enter после символа
+String word = sc.nextLine();  // теперь работает
+
