@@ -120,3 +120,47 @@ sc.next()	           |Одно слово (до пробела)   |hello world �
 sc.nextLine()          |Целую строку (до Enter)   |hello world → "hello world"
 sc.next().charAt(0)	   |Один символ	              |A → 'A'
  */
+
+/*
+switсh ( выражение ) {
+    case константа1:
+    последовательность инструкций
+    break;
+    case константа2:
+    последовательность инструкций
+    break;
+    case константа3:
+    последовательность инструкций
+    break;
+    default:
+    последовательность инструкций
+В версиях Java, п редшествующих JDK7 , выражение, управляющее инструкцией switch , должно быть типа byte ,
+short, int, char или перечислением.
+// Демонстрация использования инструкции switch
+class SwitchDemo {
+    public static void main(String args[]) {
+        int i;
+
+        for(i=0; i<10; i++)
+            switch(i) {
+                case 0:
+                    System.out.println("i равно 0");
+                    break;
+                case 1:
+                    System.out.println("i равно 1");
+                    break;
+                case 2:
+                    System.out.println("i равно 2");
+                    break;
+                case 3:
+                    System.out.println("i равно 3");
+                    break;
+                case 4:
+                    System.out.println("i равно 4");
+                    break;
+                default:
+                    System.out.println("i равно или больше 5");
+            }
+    }
+}
+ */
