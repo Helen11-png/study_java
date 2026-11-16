@@ -5,6 +5,6 @@ class MyClass {
         int x2=90;
         boolean f1=x1>x2;
         boolean f2=x1<x2;
-        System.out.printnl(f1, " ", f2);
+        System.out.println(f1+" "+f2);
     }
 }
