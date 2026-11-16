@@ -46,3 +46,20 @@ char ch = sc.next().charAt(0);
 sc.nextLine();  // ← «съедаем» Enter после символа
 String word = sc.nextLine();  // теперь работает
 
+запуск не забывать:
+javac MyClass.java
+java MyClass
+
+не bool, а boolean
+
+нельзя
+System.out.println(f1, " ", f2);
+но можно
+System.out.println(f1 + " " + f2);
+или
+System.out.printf("%s %s%n", f1, f2);
+
+
+если нужны нули или просто форматировние
+вместо System.out.print(hours+":"+minutes+":"+seconds);
+пишем System.out.printf("%02d:%02d:%02d%n", hours, minutes, seconds);
