@@ -59,3 +59,61 @@ class MyClass {
 инкременты
 ++x префиксная форма
 x++ постфиксная форма
+
+Префикс (++x) — «Сначала прибавь, потом отдай». (Сначала увеличиваем x, затем это новое значение используется в выражении).
+
+Постфикс (x++) — «Сначала отдай, потом прибавь». (Сначала берём текущее значение x для выражения, а уже потом увеличиваем x).
+
+Сложение строк называется конкатенацией.
+
+Методы строк
+str.length();  // возвращает длину строки str (количество символов, включая пробелы)
+str1.equals(str2); // Сравнивает строки str1 и str2
+str.indexOf('b'); // ищет в строке заданный символ (или строку), и возвращает  индекс его первого вхождения. Если элемент не найден, метод возвращает -1.
+word.charAt(0); // Получение элемента строки по его индексу.
+str1.isEmpty(); // возвращает false, если строка содержит какие-либо элементы (пробел - тоже элемент), и true - если строка пустая, т.е. не содержит ни одного элемента.
+str1.contains(str2); // проверяет, содержится ли одна строка внутри другой, и возвращает соответствующее логическое значение - true или false.
+s.toLowerCase() / s.toUpperCase()
+
+int n = 12345;                      // Это число типа int
+System.out.println(n);              // 12345
+String str1 = Integer.toString(n);  // Это строка
+System.out.println(str1);           // 12345
+Integer num = n;                    // Это число-объект класса Integer
+System.out.println(num);            // 12345
+String str2 = num.toString();        // Это строка
+System.out.println(str2);            // 12345
+
+String str = "12345";
+Integer num = Integer.valueOf(str);  // num - объект класса Integer
+System.out.println(num);             // 12345
+int num1 = num;                      // num1 - переменная типа int
+System.out.println(num1);            // 12345
+
+String str = "12345";
+int num = Integer.parseInt(str);    //num - переменная типа int
+System.out.println(num);            //12345
+
+String str = "12345";
+
+double num = Double.parseDouble(str);    //num - переменная типа double
+System.out.println(num);                 //12345.0
+
+String str = "Добро пожаловать в мир Java!";
+System.out.println(str.substring(6));         //пожаловать в мир Java!
+System.out.println(str.substring(6, 15));     //пожаловат
+
+String str = "Добро пожаловать в мир Java!";
+System.out.println(str.replace('о', 'А')); //ДАбрА пАжалАвать в мир Java!
+
+ТЕРНАРНЫЙ ОПЕРАТОР
+вместо
+int x = 24;
+if (x % 2 == 0) {
+    System.out.println("Число чётное");
+} else {
+    System.out.println("Число нечётное");
+}
+используем
+int x = 15;
+System.out.println((x % 2 == 0) ? "Число чётное" : "Число нечётное");
