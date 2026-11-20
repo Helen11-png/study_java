@@ -117,3 +117,38 @@ if (x % 2 == 0) {
 используем
 int x = 15;
 System.out.println((x % 2 == 0) ? "Число чётное" : "Число нечётное");
+
+switch (выражение) {
+    case  value1:
+        //Группа команд
+        break;
+
+    case value2 :
+        //Группа команд
+        break;
+
+    ... //Можно вставить столько проверяемых значений, сколько нужно
+
+    default: //Необязательно
+       //Группа команд, исполняемая, если значение выражения не рано ни одному из случаев
+}
+
+sc.hasNext() - возвращает буллево значение
+
+Пример задачи:
+import java.util.Scanner;
+
+class MyNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int count = 0;
+
+        // Пока во входных данных есть хотя бы один токен (слово)
+        while (sc.hasNext()) {
+            sc.next(); // Считываем слово (обязательно!)
+            count++;   // Увеличиваем счетчик
+        }
+
+        System.out.print(count);
+    }
+}
